@@ -1,0 +1,3 @@
+[submodule "gamecontroller-implementation"]
+	path = gamecontroller-implementation
+	url = https://github.com/yuzong/GameController2.git
