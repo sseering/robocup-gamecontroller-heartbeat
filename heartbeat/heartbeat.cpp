@@ -91,11 +91,15 @@ void Heartbeat::set_destination_once(struct sockaddr_in * d) {
  * @param d The address of the gamecontroller. Will not be changed or freed by this method.
  */
 void Heartbeat::set_destination(struct sockaddr_in * d) {
+	pthread_mutex_lock(&send_mutex);
 	if (destination == NULL) {
 		destination = (struct sockaddr_in *) malloc(sizeof(* destination));
+		if (destination == NULL) {
+			fprintf(stderr, "Error: malloc() failed in file %s line %d\n", __FILE__, __LINE__);
+			exit(1);
+		}
 	}
 
-	pthread_mutex_lock(&send_mutex);
 	memcpy(destination, d, sizeof(* destination));
 	destination->sin_port = htons(GAMECONTROLLER_PORT);
 	pthread_mutex_unlock(&send_mutex);
