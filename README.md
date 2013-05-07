@@ -5,4 +5,4 @@ This is the implementation of the [Robocup](http://www.robocup.org/) gamecontrol
 
 It is not designed to be a useful standalone application. You should include the source code into your own project and use it as a part of your own software. The file *replace-this-with-your-own-implementation.cpp* gives an example on the usage of the heartbeat implementation.
 
-Questios, feedback, feature suggestions and bug reports are always welcome. Nao-Team HTWK.
+Questions, feedback, feature suggestions and bug reports are always welcome. Nao-Team HTWK.

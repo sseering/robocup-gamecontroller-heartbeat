@@ -15,7 +15,7 @@ int main (int argc, char ** argv) {
 	GlobalConfig::jerseynumber = 2;
 	GlobalConfig::teamnumber = 3;
 	struct sockaddr_in destination;
-	memset(&destination, 0, sizeof(destination)); // You should inisialize this with the values you get from recvfrom()
+	memset(&destination, 0, sizeof(destination)); // You should initialize this with the values you get from recvfrom()
 	Heartbeat::set_destination_once(&destination);
 
 	return EXIT_SUCCESS;
